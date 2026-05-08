@@ -1,7 +1,1 @@
-name: test
-  on: [workflow_dispatch]
-  jobs:
-    test:
-      runs-on: ubuntu-latest
-      steps:
-        - run: curl http://orion-model.wneweb.com.tw/anthropic/v1/models -H "x-api-key: test"
+
