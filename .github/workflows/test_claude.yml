@@ -1,0 +1,13 @@
+name: Test Orion Connection
+  on: workflow_dispatch
+
+  jobs:
+    test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Test connectivity
+          run: |
+            curl -v --max-time 10 \
+              http://orion-model.wneweb.com.tw/anthropic/v1/models \
+              -H "x-api-key: test" \
+              2>&1 | tail -20
